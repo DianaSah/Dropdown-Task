@@ -1,0 +1,27 @@
+$background-color: hsl(0, 0%, 100%);
+$default-text-color: #a7aaaf;
+$border-color: #eaedf1;
+
+.dropdown {
+  max-width: 400px;
+  width: 80vw;
+  height: 35px;
+  padding: 7px 10px 5px 15px;
+  border-radius: 5px;
+  border: 1px solid $border-color;
+  background-color: $background-color;
+  list-style-type: none; 
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+
+  &:focus {
+    border-color: $border-color;
+  }
+}
+
+.defaultText {
+  color: $default-text-color;
+}

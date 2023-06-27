@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import { Dropdown, DropdownOption } from '../dropdown/Dropdown';
+import { Dropdown } from '../dropdown/Dropdown';
+import { Option } from '../dropdownOption/DropdownOption';
 
 import styles from './App.module.scss';
 
@@ -18,12 +19,12 @@ const optionsMock = [
 ]
 
 function App() {
-  const [options, setOptions] = useState<DropdownOption[]>([]);
-  const [selectedOption, setSelectedOption] = useState<DropdownOption | undefined>();
+  const [options, setOptions] = useState<Option[]>([]);
+  const [selectedOption, setSelectedOption] = useState<Option | undefined>();
 
   useEffect(() => {
     setOptions(optionsMock); // if we pretend that getting options - it's a side effect
-  })
+  }, [])
 
   return (
     <div className={styles.content}>
